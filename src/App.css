@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 2vw;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  display: flex;
+  margin: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.controls {
+  display: flex; 
+  left:0;
+}
+
+.history {
+  width: 13vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: fixed;
+  right: auto;
+  left: 70%;
+}
+
+.history > div {
+  background-color: gold;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  height: 25px;
+  width: 150px;
+  /* overflow: hidden; */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.game-board {
+  display: grid;
+  grid-auto-columns: 50px;
+  max-width: 50vw;
+  position: fixed;
+  right: 45%;
+
+}
+
+.mapRow {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: 50px;
+
+}
+
+.mapTile {
+display: block;
+width: fit-content;
+height: auto; 
+border: .5px;
+border-color: black;
+border-style: solid;
+width: 50px;
+height: 50px;
+}
+
+.mapTile::after {
+  content: ' ';
 }
